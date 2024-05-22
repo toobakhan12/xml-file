@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class
+    xmlns=" http://www.example.come"
+    xmlns:c9="example.come"
+    xmlns:c10="example.come">
+
+
+    <c9:student>
+        <c9:name> mavia</c9:name>
+        <c9:age> 10</c9:age>
+        <c9:dob> 14-augest</c9:dob>
+        <fee>5000</fee>
+    </c9:student>
+
+    <c10:student>
+        <c10:name> mavia</c10:name>
+        <c10:name> 15</c10:name>
+        <c10:name> 26-may</c10:name>
+        <fee>5000</fee>
+    </c10:student>
+
+</class>

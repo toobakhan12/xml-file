@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+
+    }
+
+    .container {
+        width: 100px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        background-color: antiquewhite;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+
+    }
+
+    .clock {
+        width: 35rem;
+        height: 35rm;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 50%;
+        border: 1px solid rgb(255, 255, 255);
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.2);
+    }
+
+    .numbers {
+        width: inherit;
+        height: inherit;
+        position: relative;
+    }
+
+
+    .numbers div {
+        position: absolute;
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .twelve {
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .three {
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+    .six {
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nine {
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+    .arrow {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+
+
+    }
+
+    .arrow ::before {
+        content: "";
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: white;
+        border-radius: 50%;
+        box-sizing: 0.2rem 0.2rem 0.5rem;
+        z-index: 10;
+    }
+
+    .arrow div{
+        width: 0.7REM;
+        height: 1orem;
+        background-color: #fff0ff;
+    }
+
+    .arrows .hour {
+        height: 7rem;
+        transform: rotate();
+    }
+
+    .arrow .secound {
+        background-color: red;
+        transform: rotate(270deg);
+    }
+</style>
+
+<body>
+    <div class="contanier">
+        <div class="clock">
+            <div class="number">
+                <div class="twelve">12 </div>
+                <div class="three">3 </div>
+                <div class="six">6 </div>
+                <div class="nin">9 </div>
+            </div>
+            <div>
+                <div class="arrows">
+                    <div class="hour"></div>
+                    <div class="minute"></div>
+                    <div class="second"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const hour = document.querySelector("hour");
+    const minute = document.querySelector(".minute");
+    const second = document.querySelector(".second");
+
+    function SetDate() {
+        const now = new Date()
+        const getSeconds = now.getSeconds();
+        const getminute = now.getminute();
+        const getHour = now.getHours();
+
+        const secondDegree = (getSeconds / 60) * 360;
+        const minuteDegrre = (getminute / 60) * 360;
+        const hourDegree = (getHour / 12) * 360;
+        
+        second.style.transform =`rotate(${secondDegree}deg)`
+        second.style.transform =`rotate(${minuteDegree}deg)`
+        second.style.transform =`rotate(${hourDegree}deg)`
+        
+    }
+
+
+</script>
+
+</html>

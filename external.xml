@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  student SYSTEM "file.dtd">
+<student>
+    <name> ali</name>
+    <age>22</age>
+    <class>12</class>
+    <fee>3000</fee>
+</student>
